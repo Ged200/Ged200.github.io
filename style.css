@@ -332,6 +332,36 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   Galerie
+   ============================================================ */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+@media (min-width: 640px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+}
+
+.gallery figure { margin: 0; }
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1.5px solid var(--ink);
+}
+
+.gallery figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  margin-top: 6px;
+}
+
+/* ============================================================
    Accessibilité
    ============================================================ */
 a:focus-visible,
